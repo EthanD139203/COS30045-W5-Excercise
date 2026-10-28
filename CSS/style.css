@@ -1,0 +1,215 @@
+#bar-chart svg,
+#line-chart svg,
+#donut-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    margin: 0;
+    padding: 30px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#bar-chart {
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+#bar-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.x-axis text,
+.y-axis text {
+    font-size: 12px;
+    fill: #444;
+}
+
+.x-axis path,
+.y-axis path,
+.x-axis line,
+.y-axis line {
+    stroke: #888;
+}
+
+.bar-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.bar {
+    transition: opacity 0.2s ease;
+}
+
+.bar:hover {
+    opacity: 0.7;
+}
+
+.chart-description {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+#line-chart {
+    width: 100%;
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+#line-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+#line-chart .x-axis text,
+#line-chart .y-axis text {
+    font-size: 12px;
+    fill: #444;
+}
+
+#line-chart .x-axis path,
+#line-chart .y-axis path {
+    stroke: #666;
+}
+
+#line-chart .x-axis line,
+#line-chart .y-axis line {
+    stroke: #999;
+}
+
+#line-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+#line-chart .data-point {
+    stroke: white;
+    stroke-width: 1.5px;
+}
+
+
+
+#line-chart .price-line {
+    fill: none;
+    stroke: #75485E;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+#line-chart .data-point {
+    fill: #75485E;
+    stroke: white;
+    stroke-width: 1.5px;
+}
+
+
+
+#donut-chart {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+#donut-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+#donut-chart .donut-slice {
+    stroke: white;
+    stroke-width: 1px;
+}
+
+
+#donut-chart .slice-label {
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+}
+
+#donut-legend {
+    max-width: 500px;
+    margin: 10px auto 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 500px) {
+    #donut-legend {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+#donut-chart .donut-slice {
+    stroke: white;
+    stroke-width: 1px;
+}
+
+#donut-chart .slice-label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+#donut-chart .donut-center-label {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+#donut-legend .legend-item {
+    line-height: 1.5;
+}
